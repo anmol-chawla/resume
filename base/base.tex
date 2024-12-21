@@ -1,13 +1,75 @@
 \documentclass[12pt]{article}
 
 % Packages
+\usepackage{array} % support tabularx
 \usepackage{titlesec}
+\usepackage[dvipsnames]{xcolor} % support color in hyperrefs
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{multirow}
+\usepackage{tabularx}
 
 % Colors
-\newcommand{\primarycolor}{green}
+\newcommand{\primarycolor}{ForestGreen}
+\newcommand{\secondarycolor}{OliveGreen}
 
 % Font Format
 \titleformat{\section}{\normalfont\large\color{\primarycolor}\vspace{-3.2ex}}{}{0ex}{}
 
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=\secondarycolor,
+    linkbordercolor=\secondarycolor,
+    filecolor=\secondarycolor,
+    urlcolor=\secondarycolor,
+    urlbordercolor=white,
+    breaklinks=true,
+}
+\makeatletter
+\Hy@AtBeginDocument{
+  \def\@pdfborder{0 0 1}
+  \def\@pdfborderstyle{/S/U/W 1}
+}
+\makeatother
+
+% Custom commands
+\newcommand*\justify{
+    \fontdimen2\font=0.4em
+    \fontdimen3\font=0.2em
+    \fontdimen4\font=0.1em
+    \fontdimen7\font=0.1em
+    \hyphenchar\font=`\-
+}
+\newcommand{\shortsection}[1]{\section{#1}\vspace{-1.2ex}}
+\newcommand{\fullhspace}[1]{\hspace*{\fill}{#1}}
+\newcommand{\spacedhrule}[1]{
+    \vspace{1ex}
+    \hrule
+    \vspace{#1}
+}
+
+% Text Constants
+\newcommand{\designation}{Software Engineer}
+
+% Setup page margins
+\newgeometry{margin=10mm}
+
 \begin{document}
+    %\pagenumbering{gobble}
+    \hrule
+    \vspace{2ex}
+
+    \begin{center}
+        \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}Xr}
+            \textbf{\Huge{Anmol Chawla}} \vspace{1ex} & {+91 7397263483} \\
+            \multirow{2}{*}{\LARGE{\color{\primarycolor}\designation}} & {Bangalore, Karnataka} \\
+            & {\href{mailto:anmolchawla10@gmail.com}{anmolchawla10@gmail.com}} \\
+        \end{tabularx}
+    \end{center}
+
+    \vspace{-1.2ex}
+    \spacedhrule{2ex}
+
+
 \end{document}
