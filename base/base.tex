@@ -2,12 +2,16 @@
 
 % Packages
 \usepackage{array} % support tabularx
-\usepackage{titlesec}
+\usepackage{enumitem}
 \usepackage[dvipsnames]{xcolor} % support color in hyperrefs
 \usepackage{hyperref}
 \usepackage{geometry}
+\usepackage{multicol}
 \usepackage{multirow}
 \usepackage{tabularx}
+\usepackage{librebaskerville}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
 
 % Colors
 \newcommand{\primarycolor}{ForestGreen}
@@ -51,25 +55,56 @@
 
 % Text Constants
 \newcommand{\designation}{Software Engineer}
+\newcommand{\introduction}{An experienced software engineer working with a demonstrated history of working with
+    software products. Skilled in working with distributed systems as well as web and mobile technologies. Familiar
+    with modern ML inference pipelines and scaling them for \mbox{throughput}.}
 
 % Setup page margins
 \newgeometry{margin=10mm}
 
 \begin{document}
     %\pagenumbering{gobble}
-    \hrule
+    %\hrule
     \vspace{2ex}
 
     \begin{center}
-        \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}Xr}
-            \textbf{\Huge{Anmol Chawla}} \vspace{1ex} & {+91 7397263483} \\
-            \multirow{2}{*}{\LARGE{\color{\primarycolor}\designation}} & {Bangalore, Karnataka} \\
-            & {\href{mailto:anmolchawla10@gmail.com}{anmolchawla10@gmail.com}} \\
+        \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X|p{0.3\textwidth}}
+            \textbf{\Huge{Anmol Chawla}} &
+                {\begin{tabularx}{0\textwidth}{>{\raggedleft\arraybackslash}p{0.26\textwidth}}
+                        {+91 7397263483} \\
+                \end{tabularx}} \\
+            \multirow{2}{*}{\LARGE{\color{\primarycolor}\designation}} &
+                {\begin{tabularx}{0\textwidth}{>{\raggedleft\arraybackslash}p{0.26\textwidth}}
+                                {Bangalore, Karnataka} \\
+                \end{tabularx}}\\
+
+            & {\begin{tabularx}{0\textwidth}{>{\raggedleft\arraybackslash}p{0.26\textwidth}}
+                {\href{mailto:anmolchawla10@gmail.com}{anmolchawla10@gmail.com}} \\
+                \end{tabularx}} \\
         \end{tabularx}
     \end{center}
 
     \vspace{-1.2ex}
     \spacedhrule{2ex}
+
+    {\noindent \introduction}
+
+    \vspace{0.8ex}
+    \spacedhrule{2ex}
+
+    \shortsection{Skills}
+    {
+        \vspace{-3ex}
+        \begin{center}
+            \begin{multicols}{5}
+                \begin{itemize}[nosep,parsep=0.1ex,itemsep=0.1ex]
+                    \item Kotlin
+                \end{itemize}
+            \end{multicols}
+        \end{center}
+        \vspace{-1.5ex}
+    }
+
 
 
 \end{document}
