@@ -17,8 +17,10 @@
 \newcommand{\primarycolor}{ForestGreen}
 \newcommand{\secondarycolor}{OliveGreen}
 
-% Font Format
+% Title Font Format
 \titleformat{\section}{\normalfont\large\color{\primarycolor}\vspace{-3.2ex}}{}{0ex}{}
+\titleformat{\subsection}{\raggedright\normalfont\normalsize\color{\primarycolor}\vspace{-4ex}}{}{0ex}{}
+\titlespacing{\subsection}{5pt}{*5}{*1}
 
 % Hyperlink setup
 \hypersetup{
@@ -63,7 +65,7 @@
 \newgeometry{margin=10mm}
 
 \begin{document}
-    %\pagenumbering{gobble}
+    \pagenumbering{gobble}
     %\hrule
     \vspace{2ex}
 
@@ -94,13 +96,31 @@
 
     \shortsection{Skills}
     {
-        \vspace{-3ex}
+        \vspace{3ex}
         \begin{center}
+            \subsection*{Languages}\vspace{-2ex}
+            {
             \begin{multicols}{5}
                 \begin{itemize}[nosep,parsep=0.1ex,itemsep=0.1ex]
                     \item Kotlin
+                    \item Python
+                    \item Dart
+                    \item Javascript
+                    \item Swift
                 \end{itemize}
             \end{multicols}
+        }
+        \subsection*{Frameworks}\vspace{-2ex}
+        {
+            \begin{multicols}{5}
+                \begin{itemize}[nosep, parsep=0.1ex,itemsep=0.1ex]
+                    \item Kubernetes
+                    \item Docker
+                    \item SwiftUI
+                    \item Linux
+                \end{itemize}
+            \end{multicols}
+        }
         \end{center}
         \vspace{-1.5ex}
     }
