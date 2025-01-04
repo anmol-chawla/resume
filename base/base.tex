@@ -18,9 +18,12 @@
 \newcommand{\secondarycolor}{OliveGreen}
 
 % Title Font Format
-\titleformat{\section}{\normalfont\large\color{\primarycolor}\vspace{-3.2ex}}{}{0ex}{}
-\titleformat{\subsection}{\raggedright\normalfont\normalsize\color{\primarycolor}\vspace{-4ex}}{}{0ex}{}
-\titlespacing{\subsection}{5pt}{*5}{*1}
+\titleformat{\section}{\normalfont\large\color{\primarycolor}}{}{0ex}{}
+\titleformat{\subsection}{\normalfont\normalsize\color{\primarycolor}}{}{0ex}{}
+
+% Title Spacing
+\titlespacing{\section}{0pt}{-0.5ex}{1ex}
+\titlespacing*{\subsection}{1ex}{-1ex}{-1ex}
 
 % Hyperlink setup
 \hypersetup{
@@ -47,7 +50,6 @@
     \fontdimen7\font=0.1em
     \hyphenchar\font=`\-
 }
-\newcommand{\shortsection}[1]{\section{#1}\vspace{-1.2ex}}
 \newcommand{\fullhspace}[1]{\hspace*{\fill}{#1}}
 \newcommand{\spacedhrule}[1]{
     \vspace{1ex}
@@ -94,14 +96,12 @@
     \vspace{0.8ex}
     \spacedhrule{2ex}
 
-    \shortsection{Skills}
+    \section{Skills}
     {
-        \vspace{3ex}
-        \begin{center}
-            \subsection*{Languages}\vspace{-2ex}
-            {
+        \subsection{Languages}
+        {
             \begin{multicols}{5}
-                \begin{itemize}[nosep,parsep=0.1ex,itemsep=0.1ex]
+                \begin{itemize}[nosep, parsep=0.1ex, itemsep=0.1ex]
                     \item Kotlin
                     \item Python
                     \item Dart
@@ -110,21 +110,33 @@
                 \end{itemize}
             \end{multicols}
         }
-        \subsection*{Frameworks}\vspace{-2ex}
+        \subsection{Frameworks}
         {
             \begin{multicols}{5}
-                \begin{itemize}[nosep, parsep=0.1ex,itemsep=0.1ex]
-                    \item Kubernetes
-                    \item Docker
+                \begin{itemize}[nosep, parsep=0.1ex, itemsep=0.1ex]
+                    \item Dropwizard
                     \item SwiftUI
-                    \item Linux
+                    \item Flutter
+                    \item Diffusers
+                    \item React
                 \end{itemize}
             \end{multicols}
         }
-        \end{center}
-        \vspace{-1.5ex}
+        \subsection{Tools}
+        {
+            \begin{multicols}{5}
+                \begin{itemize}[nosep, parsep=0.1ex, itemsep=0.1ex]
+                    \item Kubernetes
+                    \item Docker
+                    \item Linux
+                    \item CDN
+                    \item Git
+                \end{itemize}
+            \end{multicols}
+        }
     }
 
-
+    \vspace{-0.5ex}
+    \spacedhrule{2ex}
 
 \end{document}
