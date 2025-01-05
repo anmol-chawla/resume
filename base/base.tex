@@ -154,7 +154,7 @@
                     {
                         Streamlined content management on platform by migrating from single-region replicated Postgres
                         database to \textbf {multi-region geo-replicated Azure Cosmos (No-SQL) database}, \mbox {creating} a
-                        single source of truth for content and eliminating consistency problems between multiple databases.
+                        single source of truth for content and eliminating consistency problems between \mbox {multiple} databases.
                         Was achieved with \textbf {0 downtime} by using \textbf {Dual Read Write strategy}, and also
                         \mbox {resulted} in a \textbf {40\% reduction in latencies}
                     }
@@ -163,14 +163,128 @@
                         Scaled reader service to \textbf {service requests globally} by establishing a
                         \textbf {multi-region distributed setup}. In the process of which a formal user service was
                         also setup, handling assigning users to a region and \textbf {re-routing requests transparently}.
-                        Allowed establishing a \textbf {point of presence in different regions} and
-                        \textbf {isolating financial records} to the user's region. The setup involved usage of the
+                        Allowed establishing a \textbf {point of \mbox {presence} in different regions} and
+                        \textbf {isolating financial records} to the user's region. The setup involved \mbox {usage} of the
                         \textbf {Azure's global load-balancer} and resulted in an \textbf {81\% reduction in latencies}
                         \mbox{globally}
                     }
                     \experienceItem
+                    {
+                        Created and managed \textbf {7 production Kubernetes clusters} spread across
+                        \textbf {Azure AKS, Google Cloud GKE and AWS EKS}, granting access to varied GPU nodes and
+                        handling traffic across regions.
+                    }
+                    \experienceItem
+                    {
+                        Setup and maintained \textbf {APM tooling} via \textbf {Open Telemetry and Signoz} across
+                        \textbf {7 Kubernetes clusters}, giving real time insights on latencies and errors.
+                        \textbf {Reduced mean time to resolve issues by 50\%}
+                    }
+                    \experienceItem
+                    {
+                        Implemented \textbf {Generative AI piplines} using \textbf {Diffusers and FastAPI} servers for
+                        image \mbox {generation} requirements, powering the core of Dashtoon's image generation capabilities.
+                        \textbf {Achieved 25 seconds per high resolution image generation time on L4 GPUs}
+                    }
+                    \experienceItem
+                    {
+                        \textbf {Created an internal advertisement platform} on the app for serving advertisements based on
+                        content published on the app. Created a \textbf {new presence on the app for show discovery}.
+                        Resulted in an \textbf {increase in crosswalk by 25\%}
+                    }
+                    \experienceItem
+                    {
+                        Setup \textbf {CI/CD piplines} across the organisation for Kotlin, Python, React and Flutter
+                        \mbox {repositories} using \textbf {Github Actions}, reducing the time spent on deployments and
+                        management of micro-services. Ensured \textbf {average build times of 1 minute}
+                    }
+                    \experienceItem
+                    {
+                        Conceptualized and \textbf {implemented payments micro-service} for handling user transactions and
+                        facilitating internal economy. \textbf {Simplified accounting of app purchases} by implmenting
+                        \textbf {transactions, wallet ledger and wallets} for each user. Handled 30 transactions per second.
+                    }
+                    \experienceItem
+                    {
+                        \textbf {Created a discounting platform} for entities on the app such as the episodes, shows
+                        or the app itself. Allowed \textbf {quick experimentation of pricing} by the business team.
+                        Helped \textbf {increase cross-walk on the app by 20\%}
+                    }
+                    \experienceItem
+                    {
+                        Setup \textbf {Role Based Access Control} framework for creation studio, \textbf {based on the
+                        framework used by Kubernetes}. Allowed for the separation of internal teams based on the shows
+                        being produced as well as isolating individual user creations from others.
+                    }
+                    \experienceItem
+                    {
+                        Established \textbf {pipelines for training and managing of characters} on the platform using
+                        \textbf {LoRA} for creating consistent characters using a set of photos as input. Overall time
+                        spent \textbf {training a character was within 8 minutes}
+                    }
                 \end{itemize}
             }
+        }
+
+        \subsection{Udaan}
+        {
+            \spacedSubSubSection{Product Engineer II}{January 2022 - December 2022}
+            {
+                {
+                    \begin{itemize}[itemsep=0.1ex, leftmargin=6ex, rightmargin=1ex]
+                        \experienceItem
+                        {
+                            Created a \textbf {platform for tracking last mile deliveries} in \textbf {real time} by the
+                            operations teams at last mile hub. Allowed the operations teams to \textbf {set delivery SLAs} and
+                            nudge drivers for timely deliveries. Resulted in a \textbf {reduction of 20\% in overall delivery time}
+                            for the day. Handled over \textbf {1K location updates per second}
+                        }
+                        \experienceItem
+                        {
+                            \textbf {Migrated entire organisation}, with over 200 repositories, from \textbf {Jenkins to Github Actions}
+                            for \textbf {CI/CD pipelines}. Migration was \textbf {automated} by using a \textbf {Groovy AST parser} to convert Jenkins
+                            DSL to YAML. Action runners were setup as \textbf {self-hosted runners}. Resulted in the setup
+                            becoming easier to modify and more approachable. \textbf {Reduced build times by 50\%} and had
+                            \textbf {costs saving of 40\%}
+                        }
+                        \experienceItem
+                        {
+                            \textbf {Managed over 400 Virtual Machines} across \textbf {3 Kubernetes clusters} and
+                            \textbf {7 datacenters} with a mix of Azure and on-premise.
+                        }
+                        \experienceItem
+                        {
+                            Setup \textbf {Istio proxy} across clusters to \textbf {facilitate inter-cluster communication}
+                            between services.
+                        }
+                \end{itemize}
+            }
+
+            \spacedSubSubSection{Product Engineer I}{July 2020 - January 2022}
+            {
+                \begin{itemize}[itemsep=0.1ex, leftmargin=6ex, rightmargin=1ex]
+                    \experienceItem
+                    {
+                        Facilitated \textbf {reduction in organisational infrastructure cost} by implmenting
+                        \textbf {Horizontal Pod Autoscaler} across production clusters. Teams were asked to reduce
+                        resource requests and instances required. Overall effort resulted in a
+                        \textbf {reduction of 80\% of infrastructure costs}
+                    }
+                    \experienceItem
+                    {
+                        Established a virtual warehousing concept for facilitating just-in-time deliveries from
+                        vendor to the buyer, without requiring item to be inwarded at a physical warehouse. Allowed
+                        savings of upto a day in delivery timelines
+                    }
+                    \experienceItem
+                    {
+                        \textbf {Operationalized internal routing of deliveries} which used \textbf {pigeon hole and
+                        k-means clustering} for grouping of delivery locations and historical analysis for the route to be
+                        taken within a cluster. Automated the burden of manual routing on the last mile hub team and allowed
+                        for efficiencies to be made in the delivery routes. \textbf {Reduced the process from 2 hours of
+                        manual effort to 15 minutes of automated routing}
+                    }
+            \end{itemize}
         }
     }
 
