@@ -20,10 +20,12 @@
 % Title Font Format
 \titleformat{\section}{\normalfont\large\color{\primarycolor}}{}{0ex}{}
 \titleformat{\subsection}{\normalfont\normalsize\color{\primarycolor}}{}{0ex}{}
+\titleformat{\subsubsection}{\normalfont\small\color{\secondarycolor}\vspace{2ex}}{}{0ex}{}
 
 % Title Spacing
 \titlespacing{\section}{0pt}{-0.5ex}{1ex}
 \titlespacing*{\subsection}{1.5ex}{-1ex}{-1ex}
+\titlespacing*{\subsubsection}{2.5ex}{1ex}{1ex}
 
 % Hyperlink setup
 \hypersetup{
@@ -56,6 +58,7 @@
     \hrule
     \vspace{#1}
 }
+\newcommand{\experienceItem}{\item [-] \small}
 
 % Text Constants
 \newcommand{\designation}{Software Engineer}
@@ -75,7 +78,7 @@
         \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X|p{0.3\textwidth}}
             \textbf{\Huge{Anmol Chawla}} &
                 {\begin{tabularx}{0\textwidth}{>{\raggedleft\arraybackslash}p{0.26\textwidth}}
-                        {+91 7397263483} \\
+                        {+917397263483} \\
                 \end{tabularx}} \\
             \multirow{2}{*}{\LARGE{\color{\primarycolor}\designation}} &
                 {\begin{tabularx}{0\textwidth}{>{\raggedleft\arraybackslash}p{0.26\textwidth}}
@@ -138,5 +141,36 @@
 
     \vspace{-0.5ex}
     \spacedhrule{2ex}
+
+    \section{Experience}
+    {
+        \subsection{Dashtoon}
+        {
+            \subsubsection{Founding Engineer, March 2023 - Present}
+            {
+                \begin{itemize}[itemsep=0.1ex, leftmargin=6ex, rightmargin=1ex]
+                    \experienceItem
+                    {
+                        Streamlined content management on platform by migrating from single-region replicated Postgres
+                        database to \textbf {multi-region geo-replicated Azure Cosmos (No-SQL) database}, \mbox {creating} a
+                        single source of truth for content and eliminating consistency problems between multiple databases.
+                        Was achieved with \textbf {0 downtime} by using \textbf {Dual Read Write strategy}, and also
+                        \mbox {resulted} in a \textbf {40\% reduction in latencies}
+                    }
+                    \experienceItem
+                    {
+                        Scaled reader service to \textbf {service requests globally} by establishing a
+                        \textbf {multi-region distributed setup}. In the process of which a formal user service was
+                        also setup, handling assigning users to a region and \textbf {re-routing requests transparently}.
+                        Allowed establishing a \textbf {point of presence in different regions} and
+                        \textbf {isolating financial records} to the user's region. The setup involved usage of the
+                        \textbf {Azure's global load-balancer} and resulted in an \textbf {80\% reduction in latencies}
+                        \mbox{globally}
+                    }
+                    \experienceItem
+                \end{itemize}
+            }
+        }
+    }
 
 \end{document}
